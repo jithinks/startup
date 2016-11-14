@@ -94,6 +94,7 @@
 		<version>${spring-version}</version>
 	</dependency>
     
+	<!-- database dependencies-->
     
   </dependencies>
   
