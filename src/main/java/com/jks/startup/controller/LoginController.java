@@ -20,30 +20,17 @@ public class LoginController {
 	   
 	    private static final Logger logger = Logger.getLogger(LoginController.class);
 
+		@RequestMapping(value = "/", method = RequestMethod.GET)
+		//@ResponseBody
+		public String showIndexPage() {
+			return "index";
+		}
+
 	    @RequestMapping(value = "/login", method = RequestMethod.GET)
 	    public String showLoginPage() {
 	        return "login";
 	    }
 
-	   /* @RequestMapping(value = "/login", method = RequestMethod.POST)
-	    public String handleUserLogin(ModelMap model, @RequestParam String name,
-	            @RequestParam String password) {
-
-	    	System.out.println("name:"+name);
-	    	System.out.println("password:"+password);
-	    	
-	    	logger.debug("name:"+name);
-	    	logger.debug("password:"+password);
-	    	
-	        if (!loginService.validateUser(name, password)) {
-	            model.put("errorMessage", "Invalid Credentials");
-	            return "login";
-	        }
-
-	        model.put("name", name);
-	        return "welcome";
-	    }*/
-	    
 	   @RequestMapping(value = "/login", method = RequestMethod.POST)
 	    public String handleUserLogin(ModelMap model, @ModelAttribute ("logindo") LoginDO logindo) {
 
@@ -61,5 +48,24 @@ public class LoginController {
 	        model.put("name", logindo.getName());
 	        return "welcome";
 	    }
+
+	    /* @RequestMapping(value = "/login", method = RequestMethod.POST)
+	    public String handleUserLogin(ModelMap model, @RequestParam String name,
+	            @RequestParam String password) {
+
+	    	System.out.println("name:"+name);
+	    	System.out.println("password:"+password);
+
+	    	logger.debug("name:"+name);
+	    	logger.debug("password:"+password);
+
+	        if (!loginService.validateUser(name, password)) {
+	            model.put("errorMessage", "Invalid Credentials");
+	            return "login";
+	        }
+
+	        model.put("name", name);
+	        return "welcome";
+	    }*/
 
 }
