@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 public class LoginService {
 
     public LoginService(){
-        System.out.println("LoginService loaded.......");
+        System.out.println("******Initialized LoginService bean..");
 
 
     }
