@@ -17,7 +17,7 @@
 		<tomcat-maven-plugin-version>2.2</tomcat-maven-plugin-version>
 		<servlet-version>3.0.1</servlet-version>
 		<slf4j>1.7.7</slf4j>
-		<spring-version>4.1.1.RELEASE</spring-version>
+		<spring-version>4.2.1.RELEASE</spring-version>
 		<cdi-api-version>1.0-SP4</cdi-api-version>
 		<mockito-version>1.9.0-rcl</mockito-version>
 		<aspectj-versions>1.8.13</aspectj-versions>
@@ -93,6 +93,7 @@
 		<version>${spring-version}</version>
 	</dependency>
 
+	  <!--AspectJ dependencies-->
 	<dependency>
 	  <groupId>org.aspectj</groupId>
 	  <artifactId>aspectjrt</artifactId>
@@ -104,6 +105,18 @@
 	  <artifactId>aspectjweaver</artifactId>
 	  <version>${aspectj-versions}</version>
 	</dependency>
+
+	  <!--Spring security dependencies-->
+	  <dependency>
+		  <groupId>org.springframework.security</groupId>
+		  <artifactId>spring-security-web</artifactId>
+		  <version>${spring-version}</version>
+	  </dependency>
+	  <dependency>
+		  <groupId>org.springframework.security</groupId>
+		  <artifactId>spring-security-config</artifactId>
+		  <version>${spring-version}</version>
+	  </dependency>
     
   </dependencies>
   
