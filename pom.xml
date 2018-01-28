@@ -6,7 +6,7 @@
   <groupId>com.jks.startup</groupId>
   <artifactId>startup</artifactId>
   <packaging>war</packaging>
-  <version>1.1</version>
+  <version>1.2</version>
   <name>startup</name>
   <url>http://maven.apache.org</url>
   
