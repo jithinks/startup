@@ -10,6 +10,7 @@
     <form action="/startup/login" method="POST">
         Name : <input name="name" type="text" /> 
         Password : <input name="password" type="password" />
+        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
         <input type="submit" />
     </form>
 </body>
