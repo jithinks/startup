@@ -1,5 +1,6 @@
 package com.jks.startup.service;
 
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -11,7 +12,7 @@ public class LoginService {
 
     }
     public boolean validateUser(String user, String password) {
-        return user.equalsIgnoreCase("d") && password.equals("t");
+        return StringUtils.equals(user, "user") && StringUtils.equals(password, "pass");
     }
 
 }
