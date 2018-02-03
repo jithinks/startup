@@ -20,9 +20,11 @@ public class LoginController {
 	   
 	    private static final Logger logger = Logger.getLogger(LoginController.class);
 
+	    //localhost:8080/startup/
 		@RequestMapping(value = "/", method = RequestMethod.GET)
 		//@ResponseBody
 		public String showIndexPage() {
+			System.out.println("Index service called!!");
 			return "index";
 		}
 

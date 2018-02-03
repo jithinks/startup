@@ -6,6 +6,6 @@
 <title>startup</title>
 </head>
 <body>
-Welcome ${name}. You are now authenticated.
+Welcome ${name}. Thank you for logging!!
 </body>
 </html>	
